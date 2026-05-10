@@ -75,11 +75,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Vicomoge Interior Designers — Luxury Interior Spaces in Nigeria" },
       { name: "description", content: "Vicomoge Interior Designers crafts luxury homes, offices, schools and commercial spaces with timeless elegance and detail." },
       { name: "author", content: "Vicomoge Interior Designers" },
-      { property: "og:title", content: "Vicomoge Interior Designers — Luxury Interiors" },
-      { property: "og:description", content: "Transforming homes, offices and commercial spaces into timeless masterpieces." },
+      { property: "og:title", content: "Vicomoge Interior Designers — Luxury Interior Spaces in Nigeria" },
+      { property: "og:description", content: "Vicomoge Interior Designers crafts luxury homes, offices, schools and commercial spaces with timeless elegance and detail." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Vicomoge Interior Designers — Luxury Interior Spaces in Nigeria" },
+      { name: "twitter:description", content: "Vicomoge Interior Designers crafts luxury homes, offices, schools and commercial spaces with timeless elegance and detail." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3d37c4cb-4b56-4294-8d0d-28694f34a738/id-preview-479bc6e9--a0585dc7-1808-4758-b4d7-c345d5cc2a52.lovable.app-1778426708244.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3d37c4cb-4b56-4294-8d0d-28694f34a738/id-preview-479bc6e9--a0585dc7-1808-4758-b4d7-c345d5cc2a52.lovable.app-1778426708244.png" },
     ],
     links: [
       {
