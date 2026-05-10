@@ -49,7 +49,6 @@ export function Navbar() {
             </a>
           ))}
         </nav>
-        <a href="#contact" className="hidden btn-gold lg:inline-flex">Book Consultation</a>
         <button
           aria-label="Menu"
           className="lg:hidden text-[--gold]"
