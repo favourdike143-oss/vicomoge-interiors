@@ -143,7 +143,7 @@ function CursorGlow() {
 
 function Hero() {
   return (
-    <section id="home" className="relative flex min-h-screen items-center overflow-hidden">
+    <section id="home" className="relative flex min-h-[88vh] md:min-h-screen items-center overflow-hidden">
       <div className="absolute inset-0">
         <img src={hero} alt="Luxury interior" className="h-full w-full object-cover animate-slow-zoom" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/65 to-[#0B0B0B]" />
@@ -153,7 +153,7 @@ function Hero() {
       <div className="absolute -bottom-32 -left-32 h-96 w-96 animate-glow-pulse rounded-full bg-[--gold]/20 blur-3xl" />
       <div className="absolute -top-32 -right-32 h-[28rem] w-[28rem] animate-glow-pulse rounded-full bg-[--gold]/10 blur-3xl" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-32 pb-20 md:px-10">
+      <div className="relative z-10 mx-auto w-full max-w-7xl px-6 pt-28 pb-28 md:px-10 md:pt-32 md:pb-24">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -199,18 +199,18 @@ function Hero() {
           <a href="#projects" className="btn-outline-gold">View Projects</a>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.6, duration: 1 }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[--gold]/60"
-        >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-[0.65rem] uppercase tracking-[0.4em]">Scroll</span>
-            <div className="h-10 w-px bg-gradient-to-b from-[--gold] to-transparent" />
-          </div>
-        </motion.div>
       </div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 2.6, duration: 1 }}
+        className="pointer-events-none absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-[--gold]/60"
+      >
+        <div className="flex flex-col items-center gap-2">
+          <span className="text-[0.6rem] uppercase tracking-[0.4em]">Scroll</span>
+          <div className="h-8 w-px bg-gradient-to-b from-[--gold] to-transparent" />
+        </div>
+      </motion.div>
     </section>
   );
 }
@@ -231,23 +231,9 @@ function SectionHeading({ eyebrow, title, accent, sub }: { eyebrow: string; titl
 
 function About() {
   return (
-    <section id="about" className="relative py-28 md:py-36">
+    <section id="about" className="relative py-16 md:py-24">
       <div className="absolute inset-0 gradient-radial-gold opacity-60" />
-      <div className="relative mx-auto grid max-w-7xl gap-14 px-6 md:px-10 lg:grid-cols-2 lg:items-center">
-        <Reveal>
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-sm bg-[--gold]/10 blur-2xl" />
-            <div className="relative overflow-hidden">
-              <img src={i6} alt="About Vicomoge" className="h-[560px] w-full object-cover" loading="lazy" />
-              <div className="absolute inset-0 ring-1 ring-inset ring-[--gold]/30" />
-            </div>
-            <div className="absolute -bottom-8 -right-4 hidden glass p-6 md:block">
-              <div className="font-display text-3xl text-gold-shimmer">15+</div>
-              <div className="text-xs uppercase tracking-[0.25em] text-white/70">Years of Mastery</div>
-            </div>
-          </div>
-        </Reveal>
-
+      <div className="relative mx-auto max-w-4xl px-6 md:px-10 text-center">
         <div>
           <p className="eyebrow mb-4">About the House of Vicomoge</p>
           <Reveal>
@@ -257,7 +243,7 @@ function About() {
             </h2>
           </Reveal>
           <Reveal delay={0.1}>
-            <p className="mt-6 text-white/70 leading-relaxed">
+            <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
               Vicomoge Interior Designers is a luxury studio dedicated to crafting
               spaces that are equal parts elegance, function, and emotion. Born from a love
               for refined detail, our work fuses contemporary sophistication with the warmth
@@ -265,7 +251,7 @@ function About() {
             </p>
           </Reveal>
           <Reveal delay={0.2}>
-            <p className="mt-4 text-white/65 leading-relaxed">
+            <p className="mx-auto mt-4 max-w-2xl text-white/65 leading-relaxed">
               From private residences to executive offices and curated commercial
               environments, every project is approached as a one-of-a-kind composition —
               tailored materials, bespoke lighting, and considered placements that elevate
@@ -274,7 +260,7 @@ function About() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            <div className="mt-10 grid grid-cols-3 gap-4">
+            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-4">
               {[
                 { n: 250, l: "Completed Projects" },
                 { n: 180, l: "Happy Clients" },
@@ -289,7 +275,7 @@ function About() {
           </Reveal>
 
           <Reveal delay={0.4}>
-            <a href="#lead" className="btn-gold mt-10">Begin Your Project <ArrowRight className="h-4 w-4" /></a>
+            <a href="#lead" className="btn-gold mt-10 inline-flex">Begin Your Project <ArrowRight className="h-4 w-4" /></a>
           </Reveal>
         </div>
       </div>
@@ -321,10 +307,10 @@ function ServiceCard({ icon: Icon, title, desc, delay }: { icon: typeof Crown; t
 
 function Services() {
   return (
-    <section id="services" className="relative py-28 md:py-36">
+    <section id="services" className="relative py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionHeading eyebrow="Our Services" title="A complete language of" accent="luxury living" sub="From the architecture of a room to the last decorative gesture, we orchestrate every detail of your space." />
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 md:mt-14">
           {services.map((s, i) => (
             <ServiceCard key={s.title} {...s} delay={i * 0.05} />
           ))}
@@ -340,13 +326,13 @@ function Projects() {
   const filtered = filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
-    <section id="projects" className="relative py-28 md:py-36">
+    <section id="projects" className="relative py-16 md:py-24">
       <div className="absolute inset-x-0 top-0 h-px divider-gold" />
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionHeading eyebrow="Selected Works" title="Spaces we've" accent="brought to life" />
 
         <Reveal>
-          <div className="mt-12 flex flex-wrap justify-center gap-2 md:gap-3">
+          <div className="mt-8 flex flex-wrap justify-center gap-2 md:mt-10 md:gap-3">
             {filters.map((f) => (
               <button
                 key={f}
@@ -363,7 +349,7 @@ function Projects() {
           </div>
         </Reveal>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 md:mt-10">
           {filtered.map((p, i) => (
             <Reveal key={p.title + i} delay={(i % 3) * 0.08}>
               <button
@@ -420,7 +406,7 @@ function Projects() {
 
 function WhyUs() {
   return (
-    <section id="why" className="relative py-28 md:py-36">
+    <section id="why" className="relative py-16 md:py-24">
       <div className="absolute inset-0">
         <img src={i9} alt="" className="h-full w-full object-cover opacity-15" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0B0B0B] via-[#0B0B0B]/80 to-[#0B0B0B]" />
@@ -428,7 +414,7 @@ function WhyUs() {
       <Particles count={20} />
       <div className="relative mx-auto max-w-7xl px-6 md:px-10">
         <SectionHeading eyebrow="Why Choose Us" title="The Vicomoge" accent="signature" />
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 md:mt-14">
           {why.map((w, i) => (
             <Reveal key={w.title} delay={i * 0.06}>
               <div className="card-gold group flex h-full items-start gap-5 p-7">
@@ -455,10 +441,10 @@ function Testimonials() {
     return () => clearInterval(t);
   }, []);
   return (
-    <section id="testimonials" className="relative py-28 md:py-36">
+    <section id="testimonials" className="relative py-16 md:py-24">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
         <SectionHeading eyebrow="Client Voices" title="Words from those" accent="we've welcomed home" />
-        <div className="relative mt-16 min-h-[280px]">
+        <div className="relative mt-10 min-h-[280px] md:mt-14">
           <AnimatePresence mode="wait">
             <motion.div
               key={idx}
@@ -514,12 +500,12 @@ function LeadForm() {
     setData((d) => ({ ...d, [k]: e.target.value }));
 
   return (
-    <section id="lead" className="relative py-28 md:py-36">
+    <section id="lead" className="relative py-16 md:py-24">
       <div className="absolute inset-0 gradient-radial-gold" />
       <div className="relative mx-auto max-w-6xl px-6 md:px-10">
         <SectionHeading eyebrow="Book A Consultation" title="Begin your" accent="signature project" sub="Share a few details — we'll continue the conversation on WhatsApp within minutes." />
         <Reveal>
-          <form onSubmit={onSubmit} className="glass mt-14 grid gap-5 p-8 md:p-12 md:grid-cols-2">
+          <form onSubmit={onSubmit} className="glass mt-10 grid gap-5 p-6 sm:p-8 md:mt-12 md:p-12 md:grid-cols-2">
             <Field label="Full Name" required>
               <input value={data.name} onChange={set("name")} required maxLength={100} className="input-gold" placeholder="Your name" />
             </Field>
@@ -586,10 +572,10 @@ function Field({ label, required, children, className }: { label: string; requir
 
 function Contact() {
   return (
-    <section id="contact" className="relative py-28 md:py-36">
+    <section id="contact" className="relative py-16 md:py-24">
       <div className="mx-auto max-w-7xl px-6 md:px-10">
         <SectionHeading eyebrow="Visit Us" title="Let's create" accent="something exquisite" />
-        <div className="mt-16 grid gap-6 lg:grid-cols-3">
+        <div className="mt-10 grid gap-6 lg:grid-cols-3 md:mt-14">
           {[
             { icon: Phone, label: "Call", value: "0703 549 7116", href: "tel:+2347035497116" },
             { icon: MessageCircle, label: "WhatsApp", value: "Chat Instantly", href: `https://wa.me/${WHATSAPP}` },
