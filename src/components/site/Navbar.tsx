@@ -30,11 +30,11 @@ export function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
-        <a href="#home" className="flex items-center gap-3">
-          <img src={logo} alt="Vicomoge" className="h-10 w-10 rounded-full object-cover ring-1 ring-[--gold]/40" />
-          <div className="leading-tight">
-            <div className="font-display text-base text-gold-shimmer">Vicomoge</div>
-            <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]/70">Interior Designers</div>
+        <a href="#home" className="flex min-w-0 items-center gap-2 sm:gap-3">
+          <img src={logo} alt="Vicomoge" className="h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 rounded-full object-cover ring-1 ring-[--gold]/40" />
+          <div className="min-w-0 leading-tight">
+            <div className="truncate font-display text-sm sm:text-base text-gold-shimmer">Vicomoge</div>
+            <div className="truncate text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[--gold]/70">Interior Designers</div>
           </div>
         </a>
         <nav className="hidden items-center gap-8 lg:flex">
@@ -59,7 +59,7 @@ export function Navbar() {
         </button>
       </div>
       {open && (
-        <div className="lg:hidden glass mt-3 mx-5 rounded-md p-5 animate-fade-up">
+        <div className="lg:hidden mt-3 mx-5 rounded-md p-5 animate-fade-up border border-[--gold]/30 bg-[#0B0B0B] shadow-2xl">
           <div className="flex flex-col gap-4">
             {links.map((l) => (
               <a
