@@ -49,7 +49,7 @@ const projects = [
   { src: i6, title: "Cinematic Living", category: "Residential" },
   { src: i7, title: "Heritage Dining", category: "Decor Styling" },
   { src: i8, title: "Soft Neutral Lounge", category: "Residential" },
-  { src: i9, title: "Penthouse Salon", category: "Residential" },
+  { src: i9, title: "Luxury Sitting Room", category: "Residential" },
   { src: hero, title: "Royal Suite", category: "Residential" },
 ];
 
