@@ -69,6 +69,7 @@ const testimonials = [
   { name: "Chinedu E.", role: "CEO, Bridgepoint Ltd", quote: "Our office now commands the room before we say a word. Worth every naira." },
   { name: "Mrs. Bello", role: "School Director", quote: "The transformation was breathtaking. Children walk in inspired every morning." },
   { name: "Tunde A.", role: "Property Developer", quote: "Premium taste and seamless project management. They are my only call now." },
+  { name: "Happy Client", role: "Homeowner", quote: "I'm honestly super impressed with the transformation done by Vicomogeinteriors. From the color combinations to the finishing and attention to detail, everything came out elegant, modern, and luxurious. They understood exactly the kind of space I wanted and brought the vision to life beautifully. The professionalism, creativity, and quality of work were top-notch. If you're looking for classy and unique interior designs that truly stand out, I highly recommend Vicomogeinteriors. Thank you for making my space feel like a dream home!" },
 ];
 
 function Index() {
@@ -579,7 +580,7 @@ function Contact() {
           {[
             { icon: Phone, label: "Call", value: "0703 549 7116", href: "tel:+2347035497116" },
             { icon: MessageCircle, label: "WhatsApp", value: "Chat Instantly", href: `https://wa.me/${WHATSAPP}` },
-            { icon: Mail, label: "Email", value: "hello@vicomoge.com", href: "mailto:hello@vicomoge.com" },
+            { icon: Mail, label: "Email", value: "Vicomogeinterior@gmail.com", href: "mailto:Vicomogeinterior@gmail.com" },
           ].map((c, i) => (
             <Reveal key={c.label} delay={i * 0.08}>
               <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="card-gold group flex items-center gap-5 p-7">
@@ -644,7 +645,7 @@ function Footer() {
             <div className="eyebrow mb-4">Reach</div>
             <ul className="space-y-2 text-sm text-white/65">
               <li>0703 549 7116</li>
-              <li>hello@vicomoge.com</li>
+              <li>Vicomogeinterior@gmail.com</li>
               <li>Lagos, Nigeria</li>
             </ul>
           </div>
