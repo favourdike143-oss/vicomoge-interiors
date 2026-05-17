@@ -65,7 +65,7 @@ const why = [
 ];
 
 const testimonials = [
-  { name: "Adaeze O.", role: "Lagos Homeowner", quote: "Vicomoge turned our home into a five-star retreat. Pure artistry, flawless execution." },
+  { name: "Adaeze O.", role: "Abuja Homeowner", quote: "Vicomoge turned our home into a five-star retreat. Pure artistry, flawless execution." },
   { name: "Chinedu E.", role: "CEO, Bridgepoint Ltd", quote: "Our office now commands the room before we say a word. Worth every naira." },
   { name: "Mrs. Bello", role: "School Director", quote: "The transformation was breathtaking. Children walk in inspired every morning." },
   { name: "Tunde A.", role: "Property Developer", quote: "Premium taste and seamless project management. They are my only call now." },
@@ -600,14 +600,14 @@ function Contact() {
           <div className="mt-10 overflow-hidden border border-[--gold]/20">
             <iframe
               title="Vicomoge Location"
-              src="https://www.google.com/maps?q=Lagos,Nigeria&output=embed"
+              src="https://www.google.com/maps?q=Abuja,Nigeria&output=embed"
               className="h-[420px] w-full grayscale-[60%] contrast-110"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
           <div className="mt-4 flex items-center justify-center gap-2 text-sm text-white/60">
-            <MapPin className="h-4 w-4 text-[--gold]" /> Lagos, Nigeria · By appointment
+            <MapPin className="h-4 w-4 text-[--gold]" /> Abuja, Nigeria · By appointment
           </div>
         </Reveal>
       </div>
@@ -646,7 +646,7 @@ function Footer() {
             <ul className="space-y-2 text-sm text-white/65">
               <li>0703 549 7116</li>
               <li>Vicomogeinterior@gmail.com</li>
-              <li>Lagos, Nigeria</li>
+              <li>Abuja, Nigeria</li>
             </ul>
           </div>
           <div>
