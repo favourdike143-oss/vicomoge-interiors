@@ -455,8 +455,8 @@ function Testimonials() {
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className="glass relative mx-auto max-w-3xl p-10 md:p-14 text-center"
             >
-              <Quote className="pointer-events-none absolute left-8 top-8 h-14 w-14 text-[--gold]/20" />
-              <Quote className="pointer-events-none absolute right-8 bottom-8 h-14 w-14 rotate-180 text-[--gold]/20" />
+              <Quote className="pointer-events-none absolute left-8 top-8 h-14 w-14 rotate-180 text-[--gold]/20" />
+              <Quote className="pointer-events-none absolute right-8 bottom-8 h-14 w-14 text-[--gold]/20" />
               <div className="flex justify-center gap-1 text-[--gold]">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
               </div>
