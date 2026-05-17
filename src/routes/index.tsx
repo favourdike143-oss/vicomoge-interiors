@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 const WHATSAPP = "2347035497116";
 
 const services = [
-  { icon: LayoutGrid, title: "Space Planning", desc: "Functional layouts engineered around how you live and work." },
+  { icon: LayoutGrid, title: "Spacing and Planning", desc: "Functional layouts engineered around how you live and work." },
   { icon: Wallpaper, title: "Wallpaper Installations", desc: "Hand-selected textures and finishes for statement walls." },
   { icon: BedDouble, title: "Luxury Beddings", desc: "Hotel-grade comfort tailored to your sanctuary." },
   { icon: GraduationCap, title: "School Decor", desc: "Inspiring learning spaces that nurture creativity." },
