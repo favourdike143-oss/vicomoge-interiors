@@ -5,7 +5,7 @@ import {
   ArrowRight, Sparkles, LayoutGrid, Wallpaper, BedDouble, GraduationCap,
   Briefcase, Home, Blinds, ChefHat, Palette, Scissors, Crown,
   CheckCircle2, Eye, Wrench, Smile, Hammer, Phone, Mail, MapPin,
-  MessageCircle, Quote, Instagram, Facebook, Twitter, Star,
+  MessageCircle, Quote, Instagram, Facebook, Star, Target, Compass, Heart, Award,
 } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Particles } from "@/components/site/Particles";
@@ -13,6 +13,7 @@ import { Reveal } from "@/components/site/Reveal";
 import { Counter } from "@/components/site/Counter";
 import logo from "@/assets/logo.jpg";
 import hero from "@/assets/interior-2.jpg";
+import founder from "@/assets/founder.jpg";
 import i1 from "@/assets/interior-1.jpg";
 import i3 from "@/assets/interior-3.jpg";
 import i4 from "@/assets/interior-4.jpg";
