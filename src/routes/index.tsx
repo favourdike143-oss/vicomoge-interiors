@@ -232,11 +232,12 @@ function SectionHeading({ eyebrow, title, accent, sub }: { eyebrow: string; titl
 }
 
 function About() {
+  const [storyOpen, setStoryOpen] = useState(false);
   return (
     <section id="about" className="relative py-16 md:py-24">
       <div className="absolute inset-0 gradient-radial-gold opacity-60" />
-      <div className="relative mx-auto max-w-4xl px-6 md:px-10 text-center">
-        <div>
+      <div className="relative mx-auto max-w-7xl px-6 md:px-10">
+        <div className="text-center">
           <p className="eyebrow mb-4">About the House of Vicomoge</p>
           <Reveal>
             <h2 className="font-display text-4xl leading-tight md:text-5xl">
@@ -244,44 +245,181 @@ function About() {
               <span className="italic text-gold-shimmer">timeless interiors</span>
             </h2>
           </Reveal>
-          <Reveal delay={0.1}>
-            <p className="mx-auto mt-6 max-w-2xl text-white/70 leading-relaxed">
-              Vicomoge Interior Designers is a luxury studio dedicated to crafting
-              spaces that are equal parts elegance, function, and emotion. Born from a love
-              for refined detail, our work fuses contemporary sophistication with the warmth
-              of African hospitality.
-            </p>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mx-auto mt-4 max-w-2xl text-white/65 leading-relaxed">
-              From private residences to executive offices and curated commercial
-              environments, every project is approached as a one-of-a-kind composition —
-              tailored materials, bespoke lighting, and considered placements that elevate
-              everyday living into a signature experience.
-            </p>
-          </Reveal>
+        </div>
 
-          <Reveal delay={0.3}>
-            <div className="mx-auto mt-10 grid max-w-2xl grid-cols-3 gap-4">
-              {[
-                { n: 250, l: "Completed Projects" },
-                { n: 180, l: "Happy Clients" },
-                { n: 15, l: "Years Experience" },
-              ].map((s) => (
-                <div key={s.l} className="border border-[--gold]/20 bg-black/30 p-5 text-center">
-                  <Counter to={s.n} />
-                  <div className="mt-2 text-[0.65rem] uppercase tracking-[0.25em] text-white/60">{s.l}</div>
+        {/* Brief History with founder image */}
+        <div className="mt-12 grid gap-10 md:mt-16 md:grid-cols-2 md:items-center">
+          <Reveal>
+            <div className="relative">
+              <div className="absolute -inset-3 -z-10 bg-[--gold]/10 blur-2xl" />
+              <div className="relative overflow-hidden border border-[--gold]/30">
+                <img
+                  src={founder}
+                  alt="Founder of Vicomoge Interiors"
+                  className="h-full w-full object-cover aspect-[4/5]"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5">
+                  <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]">Founder</div>
+                  <div className="font-display text-xl text-white mt-1">The Face of Vicomoge Interiors</div>
                 </div>
-              ))}
+              </div>
             </div>
           </Reveal>
-
-          <Reveal delay={0.4}>
-            <a href="#lead" className="btn-gold mt-10 inline-flex">Begin Your Project <ArrowRight className="h-4 w-4" /></a>
+          <Reveal delay={0.1}>
+            <div>
+              <p className="eyebrow mb-3">Brief History</p>
+              <h3 className="font-display text-3xl md:text-4xl">
+                <span className="text-white">A passion that became a </span>
+                <span className="italic text-gold-shimmer">luxury house</span>
+              </h3>
+              <p className="mt-5 text-white/75 leading-relaxed">
+                Vicomoge Interiors was born from a deep passion for transforming ordinary spaces into beautiful, elegant, and functional environments. Founded with a vision to bring luxury, comfort, and creativity into every home and commercial space, the brand is dedicated to creating interiors that truly reflect style and personality.
+              </p>
+              <p className="mt-4 text-white/65 leading-relaxed">
+                What started as a love for beautiful spaces gradually grew into a professional interior design brand focused on excellence, attention to detail, and modern aesthetics. Vicomoge Interiors believes that every space tells a story, and our mission is to design spaces that inspire comfort, confidence, and happiness.
+              </p>
+              <button
+                onClick={() => setStoryOpen(true)}
+                className="btn-outline-gold mt-6 inline-flex"
+              >
+                Read Full Story <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
           </Reveal>
         </div>
+
+        {/* Introduction */}
+        <Reveal>
+          <div className="mt-16 mx-auto max-w-3xl text-center md:mt-20">
+            <p className="eyebrow mb-3">Introduction</p>
+            <p className="text-white/75 leading-relaxed">
+              Vicomoge Interiors is a luxury interior design brand dedicated to transforming spaces into elegant, functional, and timeless environments. We specialize in residential, commercial, and shortlet interior designs, combining creativity, comfort, and modern aesthetics to bring our clients' visions to life. At Vicomoge Interiors, every space is designed with style, sophistication, and attention to details.
+            </p>
+          </div>
+        </Reveal>
+
+        {/* Vision / Mission / Philosophy / Experience */}
+        <div className="mt-14 grid gap-5 md:grid-cols-2">
+          <PillarCard
+            icon={Eye}
+            eyebrow="Our Vision"
+            title="A leading luxury design house"
+            body="To become a leading luxury interior design brand known for creating timeless, elegant, and functional spaces that inspire comfort, beauty, and modern living across Nigeria and beyond."
+          />
+          <PillarCard
+            icon={Target}
+            eyebrow="Our Mission"
+            title="Stylish, functional, personal"
+            body="To transform spaces into stylish and functional environments through creativity, innovation, and attention to details. We are committed to delivering high-quality interior solutions that reflect our clients' personalities, lifestyles, and dreams while providing exceptional customer satisfaction and professionalism in every project."
+          />
+          <PillarCard
+            icon={Heart}
+            eyebrow="Philosophy"
+            title="Design is more than decoration"
+            body={`At Vicomoge Interiors, we believe that every space should be a perfect blend of beauty, comfort, functionality, and personality. Our design philosophy is centered on creating timeless interiors that not only look luxurious but also feel warm, practical, and inspiring.\n\nWe approach every project with creativity, attention to details and a deep understanding of our clients' lifestyles and preferences. From modern minimalism to elegant luxury designs, we focus on transforming ordinary spaces into unique experiences that reflect sophistication, harmony, and comfort.\n\nAt Vicomoge Interiors, design is more than decoration — it is about creating spaces that tell stories, enhance everyday living, and leave lasting impressions.`}
+          />
+          <PillarCard
+            icon={Award}
+            eyebrow="Years Of Experience"
+            title="15+ years of veteran craft"
+            body={`With over 15 Years of experience in the interior design industry, we have built a reputation for creativity, excellence, and attention to detail. Over the years, we have successfully transformed residential homes, luxury apartments, short let spaces, offices, and commercial environments into elegant and functional spaces tailored to our clients' lifestyles and visions.\n\nOur experience has given us a strong understanding of modern interior trends, space planning, color harmony, furniture selection, and luxury styling. At Vicomoge Interiors, every project is approached with professionalism, innovation, and a commitment to delivering high-quality results that exceed expectations.\n\nAs Veteran Interior Designers, our passion has remained the same — creating beautiful spaces that inspire comfort, sophistication, and lasting impressions.`}
+          />
+        </div>
+
+        <Reveal delay={0.3}>
+          <div className="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-4">
+            {[
+              { n: 250, l: "Completed Projects" },
+              { n: 180, l: "Happy Clients" },
+              { n: 15, l: "Years Experience" },
+            ].map((s) => (
+              <div key={s.l} className="border border-[--gold]/20 bg-black/30 p-5 text-center">
+                <Counter to={s.n} />
+                <div className="mt-2 text-[0.65rem] uppercase tracking-[0.25em] text-white/60">{s.l}</div>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.4}>
+          <div className="mt-10 text-center">
+            <a href="#lead" className="btn-gold inline-flex">Begin Your Project <ArrowRight className="h-4 w-4" /></a>
+          </div>
+        </Reveal>
       </div>
+
+      {/* Full Brief History Modal */}
+      <AnimatePresence>
+        {storyOpen && (
+          <motion.div
+            className="fixed inset-0 z-[80] flex items-center justify-center bg-black/90 p-4 md:p-8"
+            initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+            onClick={() => setStoryOpen(false)}
+          >
+            <motion.div
+              initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="glass relative w-full max-w-3xl max-h-[88vh] overflow-y-auto p-8 md:p-12"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setStoryOpen(false)}
+                className="absolute right-4 top-4 inline-flex h-10 w-10 items-center justify-center border border-[--gold]/50 text-[--gold] hover:bg-[--gold] hover:text-black"
+                aria-label="Close"
+              ><CloseIcon className="h-4 w-4" /></button>
+              <p className="eyebrow mb-3">Brief History</p>
+              <h3 className="font-display text-3xl md:text-4xl">
+                <span className="text-white">The </span>
+                <span className="italic text-gold-shimmer">Vicomoge</span>
+                <span className="text-white"> story</span>
+              </h3>
+              <div className="mt-6 flex flex-col gap-4 text-white/75 leading-relaxed">
+                <p>
+                  Vicomoge Interiors was born from a deep passion for transforming ordinary spaces into beautiful, elegant, and functional environments. Founded with a vision to bring luxury, comfort, and creativity into every home and commercial space, the brand is dedicated to creating interiors that truly reflect style and personality.
+                </p>
+                <p>
+                  What started as a love for beautiful spaces gradually grew into a professional interior design brand focused on excellence, attention to detail, and modern aesthetics. Vicomoge Interiors believes that every space tells a story, and our mission is to design spaces that inspire comfort, confidence, and happiness.
+                </p>
+                <p>
+                  From luxury homes to stylish short-let apartments and commercial spaces, Vicomoge Interiors combines creativity, functionality, and sophistication to deliver unique designs tailored to each client's taste and lifestyle. Our goal is not just to decorate spaces, but to create experiences people will always remember.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
+  );
+}
+
+function PillarCard({ icon: Icon, eyebrow, title, body }: { icon: typeof Crown; eyebrow: string; title: string; body: string }) {
+  const [open, setOpen] = useState(false);
+  const isLong = body.length > 280;
+  return (
+    <Reveal>
+      <div className="card-gold group h-full p-7 md:p-8">
+        <div className="flex items-center gap-4">
+          <div className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center border border-[--gold]/40 text-[--gold] transition-all duration-500 group-hover:bg-[--gold] group-hover:text-black">
+            <Icon className="h-5 w-5" />
+          </div>
+          <div>
+            <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]/80">{eyebrow}</div>
+            <h3 className="font-display text-xl text-white mt-1">{title}</h3>
+          </div>
+        </div>
+        <div className={`mt-5 text-sm text-white/70 leading-relaxed whitespace-pre-line ${!open && isLong ? "line-clamp-4" : ""}`}>
+          {body}
+        </div>
+        {isLong && (
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="mt-4 text-[0.65rem] uppercase tracking-[0.3em] text-[--gold] hover:text-white transition"
+          >
+            {open ? "Show Less" : "Read More"} →
+          </button>
+        )}
+      </div>
+    </Reveal>
   );
 }
 
