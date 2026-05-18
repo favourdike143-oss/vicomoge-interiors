@@ -5,7 +5,7 @@ import {
   ArrowRight, Sparkles, LayoutGrid, Wallpaper, BedDouble, GraduationCap,
   Briefcase, Home, Blinds, ChefHat, Palette, Scissors, Crown,
   CheckCircle2, Eye, Wrench, Smile, Hammer, Phone, Mail, MapPin,
-  MessageCircle, Quote, Instagram, Facebook, Star, Target, Compass, Heart, Award,
+  MessageCircle, Quote, Instagram, Facebook, Pin, Star, Target, Compass, Heart, Award, X as CloseIcon,
 } from "lucide-react";
 import { Navbar } from "@/components/site/Navbar";
 import { Particles } from "@/components/site/Particles";
