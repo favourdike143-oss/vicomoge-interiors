@@ -169,7 +169,7 @@ function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.7, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-4xl font-display text-5xl leading-[1.05] md:text-7xl lg:text-[5.5rem]"
+          className="max-w-4xl font-display text-4xl leading-[1.08] sm:text-5xl md:text-7xl lg:text-[5.5rem]"
         >
           <span className="text-white/90">Luxury Interior</span>{" "}
           <span className="text-gold-shimmer">Spaces</span>{" "}
@@ -183,7 +183,7 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.0, duration: 0.9 }}
-          className="mt-7 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg"
+          className="mt-7 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base md:text-lg"
         >
           Transforming homes, offices, schools, and commercial spaces into
           timeless masterpieces — where every detail whispers refinement.
@@ -193,12 +193,12 @@ function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2, duration: 0.9 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="mt-10 flex flex-col sm:flex-row sm:flex-wrap items-stretch sm:items-center gap-3 sm:gap-4"
         >
-          <a href="#lead" className="btn-gold">
+          <a href="#lead" className="btn-gold w-full sm:w-auto">
             Get Free Consultation <ArrowRight className="h-4 w-4" />
           </a>
-          <a href="#projects" className="btn-outline-gold">View Projects</a>
+          <a href="#projects" className="btn-outline-gold w-full sm:w-auto">View Projects</a>
         </motion.div>
 
       </div>
@@ -221,7 +221,7 @@ function SectionHeading({ eyebrow, title, accent, sub }: { eyebrow: string; titl
   return (
     <Reveal className="mx-auto max-w-3xl text-center">
       <p className="eyebrow mb-4">{eyebrow}</p>
-      <h2 className="font-display text-4xl md:text-6xl">
+      <h2 className="font-display text-3xl sm:text-4xl md:text-6xl">
         <span className="text-white">{title} </span>
         {accent && <span className="italic text-gold-shimmer">{accent}</span>}
       </h2>
@@ -240,7 +240,7 @@ function About() {
         <div className="text-center">
           <p className="eyebrow mb-4">About the House of Vicomoge</p>
           <Reveal>
-            <h2 className="font-display text-4xl leading-tight md:text-5xl">
+            <h2 className="font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
               <span className="text-white">A Nigerian atelier of </span>
               <span className="italic text-gold-shimmer">timeless interiors</span>
             </h2>
@@ -268,7 +268,7 @@ function About() {
           <Reveal delay={0.1}>
             <div>
               <p className="eyebrow mb-3">Brief History</p>
-              <h3 className="font-display text-3xl md:text-4xl">
+              <h3 className="font-display text-2xl sm:text-3xl md:text-4xl">
                 <span className="text-white">A passion that became a </span>
                 <span className="italic text-gold-shimmer">luxury house</span>
               </h3>
@@ -397,7 +397,7 @@ function PillarCard({ icon: Icon, eyebrow, title, body }: { icon: typeof Crown; 
   const isLong = body.length > 280;
   return (
     <Reveal>
-      <div className="card-gold group h-full p-7 md:p-8">
+      <div className="card-gold group h-full p-5 sm:p-7 md:p-8">
         <div className="flex items-center gap-4">
           <div className="inline-flex h-12 w-12 flex-shrink-0 items-center justify-center border border-[--gold]/40 text-[--gold] transition-all duration-500 group-hover:bg-[--gold] group-hover:text-black">
             <Icon className="h-5 w-5" />
@@ -431,7 +431,7 @@ function ServiceCard({ icon: Icon, title, desc, delay }: { icon: typeof Crown; t
   };
   return (
     <Reveal delay={delay}>
-      <div className="card-gold group relative overflow-hidden p-7 h-full" onMouseMove={onMove}>
+      <div className="card-gold group relative overflow-hidden p-5 sm:p-7 h-full" onMouseMove={onMove}>
         <div className="relative mb-5 inline-flex h-14 w-14 items-center justify-center rounded-sm border border-[--gold]/40 bg-black/40 text-[--gold] transition-all duration-500 group-hover:bg-[--gold] group-hover:text-black group-hover:gold-glow-strong">
           <Icon className="h-6 w-6" />
         </div>
@@ -592,14 +592,14 @@ function Testimonials() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className="glass relative mx-auto max-w-3xl p-10 md:p-14 text-center"
+              className="glass relative mx-auto max-w-3xl p-6 sm:p-10 md:p-14 text-center"
             >
-              <Quote className="pointer-events-none absolute left-8 top-8 h-14 w-14 rotate-180 text-[--gold]/20" />
-              <Quote className="pointer-events-none absolute right-8 bottom-8 h-14 w-14 text-[--gold]/20" />
+              <Quote className="pointer-events-none absolute left-4 top-4 h-8 w-8 rotate-180 text-[--gold]/20 sm:left-8 sm:top-8 sm:h-14 sm:w-14" />
+              <Quote className="pointer-events-none absolute right-4 bottom-4 h-8 w-8 text-[--gold]/20 sm:right-8 sm:bottom-8 sm:h-14 sm:w-14" />
               <div className="flex justify-center gap-1 text-[--gold]">
                 {Array.from({ length: 5 }).map((_, i) => <Star key={i} className="h-4 w-4 fill-current" />)}
               </div>
-              <p className="mt-5 font-display text-xl md:text-2xl italic leading-relaxed text-white/90">
+              <p className="mt-5 font-display text-base sm:text-xl md:text-2xl italic leading-relaxed text-white/90">
                 "{testimonials[idx].quote}"
               </p>
               <div className="mt-7">
@@ -645,7 +645,7 @@ function LeadForm() {
       <div className="relative mx-auto max-w-6xl px-6 md:px-10">
         <SectionHeading eyebrow="Book A Consultation" title="Begin your" accent="signature project" sub="Share a few details — we'll continue the conversation on WhatsApp within minutes." />
         <Reveal>
-          <form onSubmit={onSubmit} className="glass mt-10 grid gap-5 p-6 sm:p-8 md:mt-12 md:p-12 md:grid-cols-2">
+          <form onSubmit={onSubmit} className="glass mt-10 grid gap-5 p-5 sm:p-8 md:mt-12 md:p-12 md:grid-cols-2">
             <Field label="Full Name" required>
               <input value={data.name} onChange={set("name")} required maxLength={100} className="input-gold" placeholder="Your name" />
             </Field>
@@ -666,9 +666,9 @@ function LeadForm() {
             <Field label="Message" className="md:col-span-2">
               <textarea value={data.message} onChange={set("message")} maxLength={1000} rows={4} className="input-gold resize-none" placeholder="Tell us about your space and vision..." />
             </Field>
-            <div className="md:col-span-2 flex items-center justify-between gap-4 pt-2">
+            <div className="md:col-span-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
               <p className="text-xs text-white/50">By submitting, you'll be redirected to WhatsApp with your details prefilled.</p>
-              <button type="submit" className="btn-gold">
+              <button type="submit" className="btn-gold w-full sm:w-auto">
                 <MessageCircle className="h-4 w-4" /> Send via WhatsApp
               </button>
             </div>
@@ -722,13 +722,13 @@ function Contact() {
             { icon: Mail, label: "Email", value: "Vicomogeinterior@gmail.com", href: "mailto:Vicomogeinterior@gmail.com" },
           ].map((c, i) => (
             <Reveal key={c.label} delay={i * 0.08}>
-              <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="card-gold group flex items-center gap-5 p-7">
+              <a href={c.href} target={c.href.startsWith("http") ? "_blank" : undefined} rel="noreferrer" className="card-gold group flex items-center gap-4 p-5 sm:p-7 sm:gap-5 min-w-0">
                 <div className="inline-flex h-14 w-14 items-center justify-center border border-[--gold]/40 text-[--gold] transition-all duration-500 group-hover:bg-[--gold] group-hover:text-black group-hover:gold-glow">
                   <c.icon className="h-5 w-5" />
                 </div>
-                <div>
+                <div className="min-w-0 flex-1">
                   <div className="text-[0.65rem] uppercase tracking-[0.3em] text-[--gold]/70">{c.label}</div>
-                  <div className="font-display text-xl text-white mt-1">{c.value}</div>
+                  <div className="font-display text-lg sm:text-xl text-white mt-1 break-words">{c.value}</div>
                 </div>
               </a>
             </Reveal>
@@ -740,7 +740,7 @@ function Contact() {
             <iframe
               title="Vicomoge Location"
               src="https://www.google.com/maps?q=Abuja,Nigeria&output=embed"
-              className="h-[420px] w-full grayscale-[60%] contrast-110"
+              className="h-[320px] sm:h-[420px] w-full grayscale-[60%] contrast-110"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
@@ -759,7 +759,7 @@ function Footer() {
     <footer className="relative border-t border-[--gold]/15 bg-black/60 pt-20 pb-10">
       <div className="absolute inset-x-0 top-0 h-px divider-gold" />
       <div className="mx-auto max-w-7xl px-6 md:px-10">
-        <div className="grid gap-12 md:grid-cols-4">
+        <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-4">
           <div>
             <div className="flex items-center gap-3">
               <img src={logo} alt="Vicomoge" className="h-12 w-12 rounded-full ring-1 ring-[--gold]/40" />
@@ -784,7 +784,7 @@ function Footer() {
             <div className="eyebrow mb-4">Reach</div>
             <ul className="space-y-2 text-sm text-white/65">
               <li>0703 549 7116</li>
-              <li>Vicomogeinterior@gmail.com</li>
+              <li className="break-words">Vicomogeinterior@gmail.com</li>
               <li>Abuja, Nigeria</li>
             </ul>
           </div>
