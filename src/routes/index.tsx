@@ -790,13 +790,30 @@ function Footer() {
           </div>
           <div>
             <div className="eyebrow mb-4">Follow</div>
-            <div className="flex gap-3">
-              {[Instagram, Facebook, Twitter].map((I, i) => (
-                <a key={i} href="#" aria-label="social" className="inline-flex h-10 w-10 items-center justify-center border border-[--gold]/30 text-[--gold] transition hover:bg-[--gold] hover:text-black">
+            <div className="flex flex-wrap gap-3">
+              {[
+                { I: Instagram, href: "https://instagram.com/VicomogeInteriors", label: "Instagram" },
+                { I: Facebook, href: "https://facebook.com/VicomogeInteriors", label: "Facebook" },
+                { I: Pin, href: "https://pinterest.com/VicomogeInteriors", label: "Pinterest" },
+              ].map(({ I, href, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="inline-flex h-10 w-10 items-center justify-center border border-[--gold]/30 text-[--gold] transition hover:bg-[--gold] hover:text-black"
+                >
                   <I className="h-4 w-4" />
                 </a>
               ))}
             </div>
+            <ul className="mt-5 space-y-1.5 text-xs text-white/55">
+              <li>📌 Facebook: @VicomogeInteriors</li>
+              <li>📌 Instagram: @VicomogeInteriors</li>
+              <li>📌 Pinterest: @VicomogeInteriors</li>
+              <li>📌 @Vicomoge designs</li>
+            </ul>
           </div>
         </div>
         <div className="mt-14 divider-gold" />
