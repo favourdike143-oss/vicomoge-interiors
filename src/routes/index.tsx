@@ -329,12 +329,12 @@ function About() {
         <Reveal delay={0.3}>
           <div className="mx-auto mt-14 grid max-w-2xl grid-cols-3 gap-4">
             {[
-              { n: 250, l: "Completed Projects" },
-              { n: 180, l: "Happy Clients" },
-              { n: 15, l: "Years Experience" },
+              { n: 250, l: "Completed Projects", suffix: "+" },
+              { n: 95, l: "Happy Clients", suffix: "%" },
+              { n: 15, l: "Years Experience", suffix: "+" },
             ].map((s) => (
               <div key={s.l} className="border border-[--gold]/20 bg-black/30 p-5 text-center">
-                <Counter to={s.n} />
+                <Counter to={s.n} suffix={s.suffix} />
                 <div className="mt-2 text-[0.65rem] uppercase tracking-[0.25em] text-white/60">{s.l}</div>
               </div>
             ))}
