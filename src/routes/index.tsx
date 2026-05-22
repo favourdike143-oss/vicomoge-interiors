@@ -812,7 +812,7 @@ function Footer() {
               <li>📌 Facebook: @VicomogeInteriors</li>
               <li>📌 Instagram: @VicomogeInteriors</li>
               <li>📌 Pinterest: @VicomogeInteriors</li>
-              <li>📌 @Vicomoge designs</li>
+              <li>📌 YouTube: @vicomoge designs</li>
             </ul>
           </div>
         </div>
