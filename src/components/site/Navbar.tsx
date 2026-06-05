@@ -31,10 +31,10 @@ export function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
         <a href="#home" className="flex min-w-0 items-center gap-2 sm:gap-3">
-          <img src={logo} alt="Vicomoge" className="h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 rounded-full object-cover ring-1 ring-[--gold]/40" />
+          <img src={logo} alt="Vicomoge" className="h-12 w-12 sm:h-11 sm:w-11 flex-shrink-0 rounded-full object-cover ring-1 ring-[--gold]/40" />
           <div className="min-w-0 leading-tight">
-            <div className="truncate font-display text-sm sm:text-base text-gold-shimmer">Vicomoge</div>
-            <div className="truncate text-[0.55rem] sm:text-[0.6rem] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[--gold]/70">Interior Designers</div>
+            <div className="truncate font-display text-lg sm:text-base text-gold-shimmer">Vicomoge</div>
+            <div className="truncate text-[0.65rem] sm:text-[0.6rem] uppercase tracking-[0.25em] sm:tracking-[0.3em] text-[--gold]/70">Interior Designers</div>
           </div>
         </a>
         <nav className="hidden items-center gap-8 lg:flex">
