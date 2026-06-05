@@ -259,8 +259,8 @@ function About() {
                   className="h-full w-full object-cover aspect-[4/5]"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-                  <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]">Founder</div>
-                  <div className="font-display text-xl text-white mt-1">The Face of Vicomoge Interiors</div>
+                  <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]">Founder & Creative Director</div>
+                  <div className="font-display text-xl text-white mt-1">Victoria Juline Sereke</div>
                 </div>
               </div>
             </div>
