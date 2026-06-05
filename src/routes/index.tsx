@@ -186,7 +186,7 @@ function Hero() {
           className="mt-7 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base md:text-lg"
         >
           Transforming homes, offices, schools, and commercial spaces into
-          timeless masterpieces — where every detail whispers refinement.
+          timeless masterpieces.
         </motion.p>
 
         <motion.div
@@ -259,8 +259,8 @@ function About() {
                   className="h-full w-full object-cover aspect-[4/5]"
                 />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-5">
-                  <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]">Founder</div>
-                  <div className="font-display text-xl text-white mt-1">The Face of Vicomoge Interiors</div>
+                  <div className="text-[0.6rem] uppercase tracking-[0.3em] text-[--gold]">Founder & Creative Director</div>
+                  <div className="font-display text-xl text-white mt-1">Victoria Juline Sereke</div>
                 </div>
               </div>
             </div>
