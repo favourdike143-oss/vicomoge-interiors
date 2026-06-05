@@ -186,7 +186,7 @@ function Hero() {
           className="mt-7 max-w-2xl text-sm leading-relaxed text-white/70 sm:text-base md:text-lg"
         >
           Transforming homes, offices, schools, and commercial spaces into
-          timeless masterpieces — where every detail whispers refinement.
+          timeless masterpieces.
         </motion.p>
 
         <motion.div
